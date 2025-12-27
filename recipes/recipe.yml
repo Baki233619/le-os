@@ -17,18 +17,6 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: brew
-    nofile-limits: true # increase nofile limits
-    brew-analytics: false # disable telemetry
-
-  - type: script
-    #snippets:
-      # - "brew install opencode qwen-code whisper-cpp ramalama rustup"
-      # - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
-      # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
-    scripts:
-      - homebrew.sh # example: run files/scripts/myscript.sh
-
   # - type: dnf
   #   # repos:
   #   #   copr:
@@ -43,6 +31,33 @@ modules:
   #       # "firefox" is the main package, "firefox-langpacks" is a dependency
   #       # - firefox
   #       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+
+  - type: script
+    #snippets:
+      # - "brew install opencode qwen-code whisper-cpp ramalama rustup"
+      # - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+      # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    # scripts:
+    #   - homebrew.sh # example: run files/scripts/myscript.sh
+
+  - type: rpm-ostree
+    repos:
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    optfix:
+      - brave.com
+    keys:
+      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    install:
+      - brave-browser
+
+  - type: bling
+    install:
+      - 1password
 
   - type: default-flatpaks
     configurations:
@@ -69,6 +84,7 @@ modules:
           - com.jeffser.Alpaca                    # Alpaca is an Ollama client where you can manage and chat with multiple models
           - com.usebottles.bottles                # Easily run Windows software on Linux with Bottles!
           - org.blender.Blender
+          - md.obsidian.Obsidian
           # - org.kde.krita
           # - org.libreoffice.LibreOffice
           # - app.drey.Warp
@@ -96,20 +112,6 @@ modules:
           # - runtime/org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22
           # - runtime/org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22
       - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: rpm-ostree
-    repos:
-      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-    optfix:
-      - brave.com
-    keys:
-      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-    install:
-      - brave-browser
-
-  - type: bling
-    install:
-      - 1password
 
   - type: fonts
     fonts:
