@@ -17,6 +17,18 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+
+  - type: script
+    #snippets:
+      # - "brew install opencode qwen-code whisper-cpp ramalama rustup"
+      # - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+      # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    scripts:
+      - homebrew.sh # example: run files/scripts/myscript.sh
+
   # - type: dnf
   #   # repos:
   #   #   copr:
@@ -99,10 +111,6 @@ modules:
     install:
       - 1password
 
-  - type: brew
-    nofile-limits: true # increase nofile limits
-    brew-analytics: false # disable telemetry
-
   - type: fonts
     fonts:
       nerd-fonts:
@@ -120,12 +128,5 @@ modules:
   #   repository: "https://github.com/octocat/dotfiles" # my dotfiles repo
   #   all-users: false # make users have to enable chezmoi manually
   #   file-conflict-policy: replace # override changed files with those from the repo
-  - type: script
-    snippets:
-      - "brew install opencode qwen-code whisper-cpp ramalama rustup"
-    #   - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
-    #   - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
-    # scripts:
-    #   - myscript.sh # example: run files/scripts/myscript.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
