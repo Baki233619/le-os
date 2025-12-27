@@ -49,23 +49,40 @@ modules:
           - org.kde.okular                        # PDF/document viewer (feature-rich, annotations, forms)
           - com.github.tchx84.Flatseal            # Manage Flatpak permissions (control app sandboxing)
           - com.ranfdev.DistroShelf               # Browse and install apps from various sources
+          # - io.github.dvlv.boxbuddyrs           # An unofficial GUI for managing your Distroboxes. Written with GTK4 + Libadwaita.
           - io.github.flattool.Warehouse          # Manage Flatpaks (alternative to GNOME Software for Flatpaks)
           - io.podman_desktop.PodmanDesktop       # Container management GUI (Docker alternative)
           - io.github.getnf.embellish             # Nerd Fonts installer/manager (programming fonts with icons)
           - me.iepure.devtoolbox                  # Developer utilities collection (JSON formatter, regex tester, etc.)
+          - com.jeffser.Alpaca                    # Alpaca is an Ollama client where you can manage and chat with multiple models
+          - com.usebottles.bottles                # Easily run Windows software on Linux with Bottles!
+          - org.blender.Blender
+          # - org.kde.krita
+          # - org.libreoffice.LibreOffice
           # - app.drey.Warp
           # - com.github.zocker_160.SyncThingy
           # - com.google.Chrome
           - com.obsproject.Studio
           - com.slack.Slack
           - dev.vencord.Vesktop
-          #- org.DolphinEmu.dolphin-emu
-          #- org.gimp.GIMP
-          #- org.inkscape.Inkscape
+          # - org.DolphinEmu.dolphin-emu
+          # - org.gimp.GIMP
+          # - org.inkscape.Inkscape
           - com.rtosta.zapzap # Whatsapp
           - org.signal.Signal
+          # - org.telegram.desktop
           - org.videolan.VLC
           - com.calibre_ebook.calibre
+          - io.github.giantpinkrobots.varia
+          # - org.torproject.torbrowser-launcher
+          # - runtime/com.obsproject.Studio.Plugin.Gstreamer
+          # - runtime/com.obsproject.Studio.Plugin.GStreamerVaapi
+          # - runtime/com.obsproject.Studio.Plugin.OBSVkCapture
+          # - runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08
+          # - runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/23.08
+          # - runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/23.08
+          # - runtime/org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22
+          # - runtime/org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: rpm-ostree
@@ -103,6 +120,12 @@ modules:
   #   repository: "https://github.com/octocat/dotfiles" # my dotfiles repo
   #   all-users: false # make users have to enable chezmoi manually
   #   file-conflict-policy: replace # override changed files with those from the repo
-
+  - type: script
+    snippets:
+      - "brew install opencode qwen-code whisper-cpp ramalama rustup"
+    #   - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+    #   - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    # scripts:
+    #   - myscript.sh # example: run files/scripts/myscript.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
