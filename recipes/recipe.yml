@@ -53,8 +53,21 @@ modules:
           - io.podman_desktop.PodmanDesktop       # Container management GUI (Docker alternative)
           - io.github.getnf.embellish             # Nerd Fonts installer/manager (programming fonts with icons)
           - me.iepure.devtoolbox                  # Developer utilities collection (JSON formatter, regex tester, etc.)
-
+          # - app.drey.Warp
+          # - com.github.zocker_160.SyncThingy
+          # - com.google.Chrome
+          - com.obsproject.Studio
+          - com.slack.Slack
+          - dev.vencord.Vesktop
+          #- org.DolphinEmu.dolphin-emu
+          #- org.gimp.GIMP
+          #- org.inkscape.Inkscape
+          - com.rtosta.zapzap # Whatsapp
+          - org.signal.Signal
+          - org.videolan.VLC
+          - com.calibre_ebook.calibre
       - scope: user # Also add Flathub user repo, but no user packages
+
   - type: rpm-ostree
     repos:
       - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
@@ -75,16 +88,16 @@ modules:
 
   - type: fonts
     fonts:
-    nerd-fonts:
-      - FiraCode # don't add spaces or "Nerd Font" suffix
-      - Hack
-      - SourceCodePro
-      - Terminus
-      - JetBrainsMono
-      - NerdFontsSymbolsOnly
-    google-fonts:
-      - Roboto
-      - Open Sans
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
 
   # - type: chezmoi
   #   repository: "https://github.com/octocat/dotfiles" # my dotfiles repo
