@@ -84,13 +84,14 @@ modules:
           - com.jeffser.Alpaca                    # Alpaca is an Ollama client where you can manage and chat with multiple models
           - com.usebottles.bottles                # Easily run Windows software on Linux with Bottles!
           - org.blender.Blender
+          - org.audacityteam.Audacity
           - md.obsidian.Obsidian
           # - org.kde.krita
           # - org.libreoffice.LibreOffice
           # - app.drey.Warp
           # - com.github.zocker_160.SyncThingy
           # - com.google.Chrome
-          - com.obsproject.Studio
+          - com.obsproject.Studio # TODO: plugins?
           - com.slack.Slack
           - dev.vencord.Vesktop
           # - org.DolphinEmu.dolphin-emu
@@ -101,7 +102,8 @@ modules:
           # - org.telegram.desktop
           - org.videolan.VLC
           - com.calibre_ebook.calibre
-          - io.github.giantpinkrobots.varia
+          - io.github.pwr_solaar.solaar # Logitech mouse etc. utility
+          # - io.github.giantpinkrobots.varia
           # - org.torproject.torbrowser-launcher
           # - runtime/com.obsproject.Studio.Plugin.Gstreamer
           # - runtime/com.obsproject.Studio.Plugin.GStreamerVaapi
